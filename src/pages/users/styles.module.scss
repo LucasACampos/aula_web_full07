@@ -1,0 +1,68 @@
+.users {
+
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    header {
+        width: 100%;
+        display: flex;
+        margin-bottom: 40px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+    
+        .actions {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+
+            button + button {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    main {
+        width: 100%;
+    }
+
+    button {
+        cursor: pointer;
+        font-size: 13px;
+        padding: 5px 20px;
+    }
+}
+
+.user {
+
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    header {
+        margin-bottom: 40px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        margin-top: 10px;
+
+        button + button {
+            margin-left: 20px;
+        }
+    }
+
+}

@@ -1,0 +1,14 @@
+.textInput {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+
+    span {
+        font-size: 22px;
+        margin-right: 10px;
+    }
+
+    input {
+        font-size: 18px;
+    }
+}

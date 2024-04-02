@@ -1,0 +1,29 @@
+.item {
+
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+
+    .title {
+        font-size: 20px;
+    }
+
+    .subTitle {
+        color: gray;
+    }
+
+    .editButton {
+        color: cyan;
+        font-size: 10px;
+        padding: 3px 5px;
+    }
+
+    .removeButton {
+        color: red;
+        font-size: 10px;
+        padding: 3px 5px;
+        margin-left: 10px;
+    }
+}
