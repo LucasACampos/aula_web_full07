@@ -56,24 +56,24 @@ export default function RolePage() {
                         "Cadastrar nova Role"
                     }</h2>
             </header>
-            <form>
-                <TextInput
-                    type="text"
-                    label="Nome"
-                    value={role.name}
-                    change={value => setRole({ ...role, name: value })}
-                />
-                <TextInput
-                    type="text"
-                    label="Descrição"
-                    value={role.description}
-                    change={value => setRole({ ...role, description: value })}
-                />
-                <div>
-                    <button onClick={goBack}>Cancelar</button>
-                    <button onClick={save}>Salvar</button>
-                </div>
-            </form>
+            
+            <TextInput
+                type="text"
+                label="Nome"
+                value={role.name}
+                change={value => setRole({ ...role, name: value })}
+            />
+            <TextInput
+                type="text"
+                label="Descrição"
+                value={role.description}
+                change={value => setRole({ ...role, description: value })}
+            />
+            <div>
+                <button onClick={goBack}>Cancelar</button>
+                <button onClick={save}>Salvar</button>
+            </div>
+            
 
         </div>
     )
