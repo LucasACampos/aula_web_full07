@@ -45,31 +45,29 @@ export default function UserPage() {
     useEffect(()=>{
         setRadioForRoles(
             rolesFromDatabase.map(
-                role =>{ 
+                (role, index) =>{ 
                     return (
-                        <>
-                            <div key={role.id}>
-                                <label>{role.name}</label>
-                                <input
-                                    value={role.name}
-                                    checked={user.roles?.includes(role.name)}
-                                    type='checkbox'
-                                    onChange={()=>{
-                                        if(user.roles?.includes(role.name)){
-                                            user.roles.splice(user.roles.indexOf(role.name), 1);
-                                        }else{
-                                            user.roles?.push(role.name);
-                                        }
-                                        setReloadCheckbox(!reloadCheckbox);
-                                    }}
-                                />
-                            </div>
-                        </>
+                        <div key={index}>
+                            <label>{role.name}</label>
+                            <input
+                                value={role.name}
+                                checked={user.roles?.includes(role.name)}
+                                type='checkbox'
+                                onChange={()=>{
+                                    if(user.roles?.includes(role.name)){
+                                        user.roles.splice(user.roles.indexOf(role.name), 1);
+                                    }else{
+                                        user.roles?.push(role.name);
+                                    }
+                                    setReloadCheckbox(!reloadCheckbox);
+                                }}
+                            />
+                        </div>
                     ) 
                 }
             )
         )
-    }, [user.id, user, reloadCheckbox]);
+    }, [user.id, user, reloadCheckbox, rolesFromDatabase]);
 
     function goBack() {
         router.back()
